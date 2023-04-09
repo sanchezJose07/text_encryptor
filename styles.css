@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Configuracion del titulo*/
+.titulo{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    top: 5%;
+    border: none;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 150%;
+    color: #1f3a8c;
+}
+
+.contenedor{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background:#f3f5fc;
+}
+
+/*Determinar las propiedades de nuestra area de texto*/
+.textoEntrada{
+    position: absolute;
+    width: 42%;
+    height: 60%;
+    left: 11%;
+    top: 15%;
+    border: none;
+    font-family: "Inter";   /*Tipo de texto*/
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: #f3f5fc;
+}
+
+/*determinaremos el color de  nuestro texto de placeholder*/
+.textoEntrada::placeholder{
+    color: #93a9eb;
+}
+
+.textoEntrada:focus, .textoEntrada:active{
+    border: none; /*eliminar los bordes de nuestro texto de entrada*/
+    outline: none;
+}
+
+.condiciones{
+    position: absolute;
+    width: 42%;
+    left: 11%;
+    top: 80%;
+    border: none;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 100%;
+    color: #193073;
+}
+
+/*Configuracion de los botones*/
+.botones{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /*alinear los botones al inicio*/
+    padding: 1%;
+    position: absolute;
+    width: 50%;
+    left: 12%;
+    top: 82%;
+}
+
+/*Configuracion del boton encriptar*/
+.botonEncriptar{
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: #193073;
+    border-radius: 18px;
+    border: none;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #ffffff;
+    margin-right: 12%;
+}
+
+/*Configuracion del boton desencriptar*/
+.botonDesencriptar{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2%;
+    gap: 8%;
+    width: 25%;
+    background: #cfe2fc;
+    border-radius: 18px;
+    border: 1px solid #193073;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+}
+
+/*Configuracion de la animacion de los botones una vez este nuestro cursor en ellos*/
+.botonEncriptar:hover, .botonDesencriptar:hover{
+    margin: 0.3%;
+    width: 24.5%;
+    padding: 1.8%;
+    margin-right: 12.2%;
+}
+
+/*Configuracion del area de div encriptado*/
+.textoNoEncontrado, .encriptadoDesencriptado{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 35%;
+    height: 65%;
+    left: 55%;
+    top: 15%;
+    background: #e8f7fd;/**/
+    box-shadow: 0px 3px 18px -10px;
+    border-radius: 30px;
+}
+
+/*configuracion interna del div encriptado*/
+.mensajeEsperando{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16%;
+    position: absolute;
+    width: 98%;
+    top: 70%;
+    left: 0%;
+    text-align: justify;
+}
+
+/*Configuracion del titulo del div encriptado*/
+.mensajeEsperando h2{
+    width: 60%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #193073;
+}
+
+/*configuracion del parrafo del div encriptado*/
+.mensajeEsperando p{
+    width: 80%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #193073;
+}
+
+/*Configuracion de la imagen 65*/
+.textoNoEncontrado img{
+    position: absolute;
+    align-items: center;
+    width: 55%;
+    height: 50%;
+    top: 15%;
+    left: 22.5%;
+}
+
+
+.mensajeEncriptadoDesencriptado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16%;
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    text-align: justify;
+}
+
+.mensajeEncriptadoDesencriptado h2{
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 30px;
+    text-align: center;
+    color: #1f3a8c;
+}
+
+/*configuracion del parrafo del div encriptado*/
+.mensajeEncriptadoDesencriptado p{
+    position: absolute;
+    width: 80%;
+    top: 200%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #193073;
+}
+
+/*Configuracion de los parametros para pantallas mas pequenas*/
+@media (max-width: 57.5em) {
+    .titulo{
+        top: 3%;
+        font-size: 18px;
+    }
+    .contenedor{
+        display: flex;
+        flex-direction: row;
+    }
+    .encriptar{
+        width: 100%;
+    }
+    .textoEntrada{
+        width: 80%;
+        height: 33%;
+        left: 10%;
+        top: 18%;
+        font-size: 20px;
+    }
+    .condiciones{
+        top: 53%;
+        width: 75%;
+    }
+    .botones{
+        width: 70%;
+        left: 17%;
+        top:57%;
+    }
+    .botonEncriptar{
+        width: 42%;
+        border-radius: 16px;
+        font-size: 15px;
+        margin-right: 5%;
+    }
+    .botonDesencriptar{
+        width: 42%;
+        border-radius: 16px;
+        font-size: 15px;
+    }
+    .botonEncriptar:hover,.botonDesencriptar:hover{
+        margin: 0.1%;
+        margin-right: 6.4%;
+        width: 40.5%;
+        padding: 1.8%;
+    }
+    .textoNoEncontrado, .encriptadoDesencriptado{
+        width: 80%;
+        height: 30%;
+        left: 10%;
+        top: 68%;
+    }
+    .mensajeEsperando{
+        width: 100%;
+        top: 20%;
+    }
+    .textoNoEncontrado img{
+        top: 0;
+        display: none;
+        visibility: hidden;
+    }
+    .mensajeEncriptadoDesencriptado h2{
+        font-size: 15px;
+    }
+    
+    /*configuracion del parrafo del div encriptado*/
+    .mensajeEncriptadoDesencriptado p{
+        font-size: 14px;
+}

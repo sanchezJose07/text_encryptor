@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class = "contenedor">
+        <div class="titulo">
+            <h2>aluraLATAM #ChallengeEncriptador</h2>
+        </div>
+        <div class = "encriptar">
+            <textarea name="textoEntrada" 
+                class="textoEntrada" 
+                id="textoEntrada" 
+                cols="30" 
+                rows="10" 
+                placeholder="Escriba el texto a encriptar"
+            ></textarea><!--esta etiqueta nos ayuda a previsualizar el texto-->
+        </div>
+        <div class="condiciones">
+            <p>&#187 Solo letras minusculas y sin acento</p>
+        </div>
+        <div class="botones">
+            <button class="botonEncriptar" type="button" onclick="encriptar()">Encriptar
+            </button>
+            <input type="button" class="botonDesencriptar" value="Desencriptar" onclick="desencriptar()"/>
+        </div>
+    </div>
+    <div class="textoNoEncontrado" id="esperandoTexto" >
+        <img src="/imagenes/not-found2.png"  id="imagen1">
+        <div class="mensajeEsperando" id="mensajeEsperando">
+            <h2 id="tituloMensaje">Ningún mensaje fue encontrado</h2>
+            <p id="parrafo">Ingresa el texto a encriptar o desencriptar</p>
+        </div>
+    </div>
+    <div class="encriptadoDesencriptado" id="textoEncriptadoDesencriptado" style="display: none;">
+        <div class="mensajeEncriptadoDesencriptado">
+            <h2 id="tituloEncriptadoDesencriptado"></h2>
+            <p id="parrafoEncriptadoDesencriptado"></p>
+        </div>
+    </div>
+</body>
+
+<script src="index.js"></script>
+</html>
